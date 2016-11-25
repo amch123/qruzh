@@ -14,6 +14,7 @@
                                     data-transform_in="y:[-300%];opacity:0;s:500;"><em>Consigue todo para tu celular</em></div>
 
                                 <div class="tp-caption main-label"
+                                    style="color: #FF7C0C;"
                                     data-x="700"
                                     data-y="210"
                                     data-start="1500"

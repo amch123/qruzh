@@ -3770,10 +3770,10 @@ html.boxed .pricing-table .plan, html.boxed .pricing-table h3 {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	border-bottom: 1px solid #DFDFDF;
-	border-left: 1px solid #ECECEC;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
 	border-radius: 8px;
-	border-right: 1px solid #ECECEC;
+	border-right: 1px solid #000000;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.04);
 	margin-bottom: 20px;
 	margin-left: auto;
@@ -3795,7 +3795,7 @@ html.boxed .pricing-table .plan, html.boxed .pricing-table h3 {
 
 .featured-box .box-content {
 	border-radius: 8px;
-	border-top: 1px solid #CCC;
+	border-top: 1px solid #000000;
 	border-top-width: 4px;
 	padding: 30px 30px 10px 30px;
 	position: relative;

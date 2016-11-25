@@ -102,7 +102,7 @@
                                             <nav>
                                                 <ul class="nav nav-pills" id="mainNav">
                                                     <li class="active">
-                                                        <a href="index.html">
+                                                        <a href="{{ url('/') }}">
                                                             Inicio
                                                         </a>
                                                     </li>
@@ -112,7 +112,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <a href="{{ url('/product') }}">
                                                             Productos
                                                         </a>
                                                     </li>
