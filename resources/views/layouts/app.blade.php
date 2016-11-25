@@ -227,10 +227,11 @@
                             </ul>
                         </div>
                         <div class="col-md-2">
-                            <h4>Siguenos</h4>
-                            <ul class="social-icons">
-                                <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                                <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <h4>Aceptamos</h4>
+                            <ul class="contact">
+                                <li><a href="#" target="_blank">{{ Html::image('template/img/visa.png') }}</i></a></li>
+                                <li><a href="#" target="_blank">{{ Html::image('template/img/mastercard.png') }}</i></a></li>
+                                <li><a href="#" target="_blank">{{ Html::image('template/img/paypal.png') }}</i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -241,12 +242,18 @@
                             <div class="col-md-7">
                                 <p>© MOBILEPHONE. Todos los derechos reservados.</p>
                             </div>
-                            <div class="col-md-5">
+                            <div class="col-md-4">
                                 <nav id="sub-menu">
                                     <ul>
-                                        <li><a href="page-faq.html">Ingresa</a></li>
-                                        <li><a href="sitemap.html">Registrate</a></li>
+                                        <li>Powered by</li>
                                     </ul>
+                                </nav>
+                            </div>
+                            <div class="col-md-1">
+                                <nav id="sub-menu">
+                                    <a href="#" class="logo">
+                                    {{ Html::image('template/img/logo-footer.png') }}
+                                    </a>
                                 </nav>
                             </div>
                         </div>

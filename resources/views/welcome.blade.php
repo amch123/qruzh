@@ -11,13 +11,7 @@
                                     data-x="700"
                                     data-y="180"
                                     data-start="500"
-                                    data-transform_in="y:[-300%];opacity:0;s:500;">Consigue todo para tu celular</div>
-
-                                <div class="tp-caption"
-                                    data-x="1030"
-                                    data-y="180"
-                                    data-start="1000"
-                                    data-transform_in="x:[300%];opacity:0;s:500;">{{ Html::image('template/img/slides/slide-title-border-light.png') }}</div>
+                                    data-transform_in="y:[-300%];opacity:0;s:500;"><em>Consigue todo para tu celular</em></div>
 
                                 <div class="tp-caption main-label"
                                     data-x="700"
@@ -26,7 +20,7 @@
                                     data-whitespace="nowrap"                         
                                     data-transform_in="y:[100%];s:500;"
                                     data-transform_out="opacity:0;s:500;"
-                                    data-mask_in="x:0px;y:0px;">y mucho más...</div>
+                                    data-mask_in="x:0px;y:0px;"><em>y mucho más...</em></div>
 
                                 <div class="tp-caption bottom-label"
                                     data-x="220"
@@ -56,39 +50,127 @@
                     </div>
                 </div>
 
+                <div role="main" class="main shop">
+
                 <div class="container">
+
                     <div class="row">
-                        <div class="col-md-12">
-                            <div class="owl-carousel owl-theme" data-plugin-options='{"items": 4, "margin": 20}'>
-                                <div>
-                                    <a href="#popupProject" data-plugin-lightbox data-plugin-options='{"type": "inline", preloader: false}'>
-                                        <span class="thumb-info">
-                                            <span>
-                                                {{ Html::image('template/img/projects/project.jpg') }}
-                                                    <span class="thumb-info-title">
-                                                        <span class="thumb-info-inner"></span>
-                                                        <span class="thumb-info-type" style="background-color: #ff179f;">Nombre</span>
-                                                    </span>
+
+                        <ul class="products product-thumb-info-list" data-plugin-masonry>
+                            <li class="col-md-3 col-sm-6 col-xs-12 product">
+                                <span class="product-thumb-info">
+                                    <a href="shop-cart.html" class="add-to-cart-product">
+                                        <span><i class="fa fa-shopping-cart"></i> Add to Cart</span>
+                                    </a>
+                                    <a href="shop-product-sidebar.html">
+                                        <span class="product-thumb-info-image">
+                                            <span class="product-thumb-info-act">
+                                                <span class="product-thumb-info-act-left"><em>View</em></span>
+                                                <span class="product-thumb-info-act-right"><em><i class="fa fa-plus"></i> Details</em></span>
                                             </span>
+                                            {{ Html::image('template/img/products/product-1.jpg', '', array('class' => 'img-responsive')) }}
                                         </span>
                                     </a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <hr class="tall">
-                                </div>
-                            </div>
+                                    <span class="product-thumb-info-content">
+                                        <a href="shop-product-sidebar.html">
+                                            <h4>Photo Camera</h4>
+                                            <span class="price">
+                                                <ins><span class="amount">$299</span></ins>
+                                            </span>
+                                        </a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li class="col-md-3 col-sm-6 col-xs-12 product">
+                                <span class="product-thumb-info">
+                                    <a href="shop-cart.html" class="add-to-cart-product">
+                                        <span><i class="fa fa-shopping-cart"></i> Add to Cart</span>
+                                    </a>
+                                    <a href="shop-product-sidebar.html">
+                                        <span class="product-thumb-info-image">
+                                            <span class="product-thumb-info-act">
+                                                <span class="product-thumb-info-act-left"><em>View</em></span>
+                                                <span class="product-thumb-info-act-right"><em><i class="fa fa-plus"></i> Details</em></span>
+                                            </span>
+                                            {{ Html::image('template/img/products/product-2.jpg', '', array('class' => 'img-responsive')) }}
+                                        </span>
+                                    </a>
+                                    <span class="product-thumb-info-content">
+                                        <a href="shop-product-sidebar.html">
+                                            <h4>Golf Bag</h4>
+                                            <span class="price">
+                                                <span class="amount">$72</span>
+                                            </span>
+                                        </a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li class="col-md-3 col-sm-6 col-xs-12 product">
+                                <span class="product-thumb-info">
+                                    <a href="shop-cart.html" class="add-to-cart-product">
+                                        <span><i class="fa fa-shopping-cart"></i> Add to Cart</span>
+                                    </a>
+                                    <a href="shop-product-sidebar.html">
+                                        <span class="product-thumb-info-image">
+                                            <span class="product-thumb-info-act">
+                                                <span class="product-thumb-info-act-left"><em>View</em></span>
+                                                <span class="product-thumb-info-act-right"><em><i class="fa fa-plus"></i> Details</em></span>
+                                            </span>
+                                            {{ Html::image('template/img/products/product-3.jpg', '', array('class' => 'img-responsive')) }}
+                                        </span>
+                                    </a>
+                                    <span class="product-thumb-info-content">
+                                        <a href="shop-product-sidebar.html">
+                                            <h4>Workout</h4>
+                                            <span class="price">
+                                                <span class="amount">$60</span>
+                                            </span>
+                                        </a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li class="col-md-3 col-sm-6 col-xs-12 product">
+                                <span class="product-thumb-info">
+                                    <a href="shop-cart.html" class="add-to-cart-product">
+                                        <span><i class="fa fa-shopping-cart"></i> Add to Cart</span>
+                                    </a>
+                                    <a href="shop-product-sidebar.html">
+                                        <span class="product-thumb-info-image">
+                                            <span class="product-thumb-info-act">
+                                                <span class="product-thumb-info-act-left"><em>View</em></span>
+                                                <span class="product-thumb-info-act-right"><em><i class="fa fa-plus"></i> Details</em></span>
+                                            </span>
+                                            {{ Html::image('template/img/products/product-4.jpg', '', array('class' => 'img-responsive')) }}
+                                        </span>
+                                    </a>
+                                    <span class="product-thumb-info-content">
+                                        <a href="shop-product-sidebar.html">
+                                            <h4>Luxury bag</h4>
+                                            <span class="price">
+                                                <span class="amount">$199</span>
+                                            </span>
+                                        </a>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <hr class="tall">
                         </div>
-                    </div>  
-                </div>              
+                    </div>
+                </div>
+            </div>
+             
 
              <section class="parallax section section-text-light section-parallax section-center" data-stellar-background-ratio="0.5">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
                                 <h1 class="mb-none"><strong>Estamos localizados</strong></h1>
-                                <h4 class="lead">en todo el terrirotio Mexicano</h4>
+                                <h4 class="lead">en todo el territorio Mexicano</h4>
                             </div>
                         </div>
                     </div>
