@@ -8,25 +8,25 @@
                                 {{ Html::image('template/img/slider1.jpg') }}
 
                                 <div class="tp-caption top-label"
-                                    data-x="175"
+                                    data-x="700"
                                     data-y="180"
                                     data-start="500"
-                                    data-transform_in="y:[-300%];opacity:0;s:500;">Todo lo hecho por tí</div>
+                                    data-transform_in="y:[-300%];opacity:0;s:500;">Consigue todo para tu celular</div>
 
                                 <div class="tp-caption"
-                                    data-x="410"
+                                    data-x="1030"
                                     data-y="180"
                                     data-start="1000"
                                     data-transform_in="x:[300%];opacity:0;s:500;">{{ Html::image('template/img/slides/slide-title-border-light.png') }}</div>
 
                                 <div class="tp-caption main-label"
-                                    data-x="170"
+                                    data-x="700"
                                     data-y="210"
                                     data-start="1500"
                                     data-whitespace="nowrap"                         
                                     data-transform_in="y:[100%];s:500;"
                                     data-transform_out="opacity:0;s:500;"
-                                    data-mask_in="x:0px;y:0px;">Lo puedes<br>vender<br>aquí</div>
+                                    data-mask_in="x:0px;y:0px;">y mucho más...</div>
 
                                 <div class="tp-caption bottom-label"
                                     data-x="220"
@@ -87,9 +87,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
-                                <i class="icon-featured fa fa-comments appear-animation" data-appear-animation="bounceIn"></i>
-                                <h2 class="mb-none"><strong>We're excited about Porto Template</strong></h2>
-                                <h3 class="lead">19,000 customers in 100 countries use Porto Template. Meet our customers.</h3>
+                                <h1 class="mb-none"><strong>Estamos localizados</strong></h1>
+                                <h4 class="lead">en todo el terrirotio Mexicano</h4>
                             </div>
                         </div>
                     </div>
@@ -109,48 +108,23 @@
                 </div>
 
 
-                <div class="container">
-                    <div class="row mt-xlg">
-                        @if (count($shops) > 0)
-                            @foreach($shops as $shop)
-                                <div class="col-md-3 col-sm-6 col-xs-12">
-                                    <span class="thumb-info thumb-info-hide-wrapper-bg">
-                                        <span class="thumb-info-wrapper">
-                                            <a href="about-me.html">
-                                                {{ Html::image('template/img/team/team-1.jpg') }}
-                                            </a>
-                                        </span>
-                                        <span class="thumb-info-social-icons">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="col-md-5">
-                                                        {{ Html::image('template/img/avatar20.jpg') }} 
-                                                    </div>
-                                                    <div class="col-md-7 text-center">
-                                                        {{ $shop->name }}
-                                                        ESTRELLAS
-                                                    </div>
-                                                </div>    
-                                            </div>
-                                        </span>
-                                    </span>
+                <div class="home-concept">
+                    <div class="container">
+                
+                        <div class="row center">
+                            <div class="col-md-6 col-md-offset-6">
+                                <div class="project-image">
+                                    <div id="fcSlideshow" class="fc-slideshow">
+                                        <ul class="fc-slides">
+                                            <li>{{ Html::image('template/img/projects/project-home-1.jpg', '', array('class' => 'img-responsive')) }}</li>
+                                            <li>{{ Html::image('template/img/projects/project-home-2.jpg', '', array('class' => 'img-responsive')) }}</li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            @endforeach
-                        @else
-                            <div class="col-md-12">
-                                <span class="thumb-info thumb-info-hide-wrapper-bg">
-                                    <span class="thumb-info-social-icons text-center">
-                                        No existen registros en la base de datos
-                                    </span>
-                                </span>
-                            </div>
-                        @endif
-                    
-                        <div class="row">
-                            <div class="col-md-12">
-                                <hr class="tall">
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
 @endsection

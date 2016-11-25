@@ -182,34 +182,55 @@
    
             @yield('content', 'Default')
         
-            <footer class="short" id="footer">
+            <footer id="footer" class="color color-primary">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-8">
-                            <h4>El Mundo Social de la Costura</h4>
-                            <hr class="light">
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <h5>MENÚ</h5>
-                                    <ul class="list list-icons list-icons-sm">
-                                        <li><i class="fa fa-caret-right caretcolor"></i> <a href="{{ url('/') }}">Inicio</a></li>
-                                        <li><i class="fa fa-caret-right caretcolor"></i> <a href="{{ url('/about') }}">Acerca De</a></li>
-                                        <li><i class="fa fa-caret-right caretcolor"></i> <a href="{{ url('/shop') }}">Tiendas</a></li>
-                                        <li><i class="fa fa-caret-right caretcolor"></i> <a href="{{ url('/blog') }}">Blog</a></li>
-                                        <li><i class="fa fa-caret-right caretcolor"></i> <a href="{{ url('/message') }}">Contáctanos</a></li>
-                                    </ul>
+                        <div class="col-md-4">
+                            <div class="newsletter">
+                                <h4>Noticias</h4>
+                                <p>Mantente actualizado en todo lo relacionado <br> a nuestros productos.</p>
+            
+                                <div class="alert alert-success hidden" id="newsletterSuccess">
+                                    <strong>Éxito!</strong> Has sido agregado a nuestra lista de correos electrónicos.
                                 </div>
+            
+                                <div class="alert alert-danger hidden" id="newsletterError"></div>
+            
+                                <form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST">
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="Correo Electrónico" name="newsletterEmail" id="newsletterEmail" type="text">
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="enviar">Ir!</button>
+                                        </span>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <div class="col-md-4" style="margin-top:45px;">
-                            <ul class="list list-icons mt-xl">
-                                <li><em>Siguenos:</em></li>
-                            </ul>
-                            <ul class="social-icons text-center">
+                        <div class="col-md-3">
+                            <div class="contact-details">
+                                <h4>Menú</h4>
+                                <ul class="contact">
+                                    <a href="#"><li><p><strong>Inicio</strong></p></li></a>
+                                    <a href="#"><li><p><strong>Nosotros</strong></p></li></a>
+                                    <a href="#"><li><p><strong>Productos</strong></p></li></a>
+                                    <a href="#"><li><p><strong>Mayoreo</strong></p></li></a>
+                                    <a href="#"><li><p><strong>Sucursales</strong></p></li></a>
+                                    <a href="#"><li><p><strong>Contáctanos</strong></p></li></a>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <h4>Siguenos</h4>
+                            <ul class="social-icons">
                                 <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
                                 <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                                <li class="social-icons-instagram"><a href="http://www.linkedin.com/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
-                                <li class="social-icons-pinterest"><a href="http://www.linkedin.com/" target="_blank" title="Pinterest"><i class="fa fa-pinterest"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Siguenos</h4>
+                            <ul class="social-icons">
+                                <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -217,8 +238,16 @@
                 <div class="footer-copyright">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12">
-                                <p>© 2016 Diseños Mayje C.A. Todos los derechos reservados.</p>
+                            <div class="col-md-7">
+                                <p>© MOBILEPHONE. Todos los derechos reservados.</p>
+                            </div>
+                            <div class="col-md-5">
+                                <nav id="sub-menu">
+                                    <ul>
+                                        <li><a href="page-faq.html">Ingresa</a></li>
+                                        <li><a href="sitemap.html">Registrate</a></li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
                     </div>
