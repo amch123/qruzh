@@ -13,7 +13,11 @@
 
 Route::get('/', 'WelcomeController@index');
 
-Route::auth();
+Route::get('/login', 'Auth\AuthController@index');
+
+Route::post('user/login', 'Auth\AuthController@login');
+
+Route::get('/register', 'UserController@create');
 
 Route::get('/home', 'HomeController@index');
 
@@ -24,8 +28,6 @@ Route::post('/message/store', 'MessageController@store');
 Route::get('/shop', 'ShopController@index');
 
 Route::get('/auth/logout', 'Auth\LoginController@logout');
-
-Route::post('/auth/login', 'Auth\LoginController@login');
 
 Route::get('/user/edit/{id}', 'UserController@edit');
 

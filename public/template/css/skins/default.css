@@ -1,5 +1,5 @@
 a {
-	color: #B0B0B0;
+	color: #000;
 }
 
 a:hover {
@@ -169,7 +169,7 @@ p.drop-caps.drop-caps-style-2:first-child:first-letter {
 }
 
 ul.nav-pills > li.active > a {
-	background-color: #a400ce;
+	background-color: #FF7514;
 }
 
 ul.nav-pills > li > a:hover,

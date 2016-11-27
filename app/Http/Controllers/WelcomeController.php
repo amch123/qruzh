@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Category;
-use App\Shop;
-use App\blog;
 
 class WelcomeController extends Controller
 {
@@ -16,14 +14,9 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-
         $categories = Category::all();
 
-        $shops = Shop::take(4)->get();
-
-        $blogs = Blog::take(4)->get();
-
-        return view('welcome', ['categories' => $categories, 'shops' => $shops, 'blogs' => $blogs]);
+        return view('welcome', ['categories' => $categories]);
     }
 
     /**

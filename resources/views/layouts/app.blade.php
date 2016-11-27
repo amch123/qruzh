@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-
         <!-- Basic -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">   
@@ -61,7 +60,7 @@
                         <div class="header-row">
                             <div class="header-column">
                                 <div class="header-logo">
-                                    <a href="index.html">
+                                    <a href="{{ url('/') }}">
                                         {{ Html::image('template/img/logo.png', '', array('width' => '141', 'height' => '74', 'data-sticky-width' => '82', 'data-sticky-height' => '40', 'data-sticky-top' => '33')) }}
                                     </a>
                                 </div>
@@ -81,10 +80,10 @@
                                     <nav class="header-nav-top">
                                         <ul class="nav nav-pills">
                                             <li class="hidden-xs">
-                                                <a href="about-us.html"><i class="fa fa-angle-right"></i> Ingresa</a>
+                                                <a href="{{ url('/login') }}"><i class="fa fa-angle-right"></i> Ingresa</a>
                                             </li>
                                             <li class="hidden-xs">
-                                                <a href="contact-us.html"><i class="fa fa-angle-right"></i> Registrate</a>
+                                                <a href="{{ url('/register') }}"><i class="fa fa-angle-right"></i> Registrate</a>
                                             </li>
                                         </ul>
                                     </nav>
@@ -133,7 +132,7 @@
                                                     </li>
                                                     <li class="dropdown dropdown-mega dropdown-mega-shop" id="headerShop">
                                                         <a class="dropdown-toggle" href="page-login.html">
-                                                            <i class="fa fa-user"></i> Cart (1) - $299
+                                                            <i class="fa fa-shopping-cart"></i> Carro (1) - $299
                                                         </a>
                                                         <ul class="dropdown-menu">
                                                             <li>

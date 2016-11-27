@@ -220,7 +220,7 @@ li {
 }
 
 #header .header-nav-top .nav > li > a, #header .header-nav-top .nav > li > span {
-	color: #999;
+	color: #000;
 	font-size: 0.9em;
 	padding: 6px 10px;
 	display: inline-block;
@@ -233,7 +233,8 @@ li {
 }
 
 #header .header-nav-top .nav > li > a:hover, #header .header-nav-top .nav > li > a a:focus {
-	background: #EEE;
+	background: #000;
+	color:#FFF;
 }
 
 #header .header-nav-top .nav > li.open > .dropdown-menu-toggle {
@@ -281,7 +282,7 @@ li {
 #header .header-search .btn-default {
 	background: transparent;
 	border: 0 none;
-	color: #CCC;
+	color: #000;
 	position: absolute;
 	right: 0;
 	top: 0;
@@ -3299,7 +3300,7 @@ html.dark .featured-box {
 }
 
 html.dark .featured-box.secondary h4 {
-	color: #FFF;
+	color: #000;
 }
 
 html.dark .featured-boxes-flat .featured-box .box-content {
@@ -3731,35 +3732,35 @@ html.dark #footer .newsletter form .btn-default {
 	}
 
 	html.dark #header .header-nav-main:not(.header-nav-main-light) nav > ul > li.dropdown-mega:not(.dropdown-full-color) .dropdown-mega-sub-title {
-		color: #999;
+		color: #000;
 	}
 
 	html.dark #header .header-nav-main:not(.header-nav-main-light) nav > ul > li.dropdown-mega:not(.dropdown-full-color) .dropdown-mega-sub-nav > li:hover > a {
-		background: #2e353e;
+		background: #000;
 	}
 
 	html.dark #header .header-nav-main:not(.header-nav-main-light) a > .thumb-info-preview .thumb-info-wrapper {
-		background: #2e353e;
+		background: #000;
 	}
 
 	html.dark #header .header-nav.header-nav-stripe nav > ul > li > a {
-		color: #CCC;
+		color: #000;
 	}
 
 	html.dark #header .header-nav.header-nav-stripe nav > ul > li:hover > a {
-		color: #FFF;
+		color: #000;
 	}
 
 	html.dark #header .header-nav.header-nav-top-line nav > ul > li > a, html.dark #header .header-nav.header-nav-top-line nav > ul > li:hover > a {
-		color: #CCC;
+		color: #000;
 	}
 
 	html.dark #header .header-nav.header-nav-dark-dropdown nav > ul > li > a, html.dark #header .header-nav.header-nav-dark-dropdown nav > ul > li:hover > a {
-		color: #CCC;
+		color: #000;
 	}
 
 	html.dark .header-nav-main nav > ul > li.dropdown-mega-signin .dropdown-menu {
-		background-color: #1d2127;
+		background-color: #000;
 	}
 }
 

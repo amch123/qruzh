@@ -32,13 +32,23 @@
                                 <div class="featured-box featured-box-primary align-left mt-xlg">
                                     <div class="box-content">
                                         <h4 class="heading-primary text-uppercase mb-md">Ingresa</h4>
-                                        <form action="{{ url('/login') }}" id="frmSignIn" method="post">
+                                        <form action="{{ url('user/login') }}" id="frmSignIn" method="post">
                                             {{ csrf_field() }}
                                             <div class="row">
                                                 <div class="form-group">
                                                     <div class="col-md-12">
                                                         <label>Correo</label>
-                                                        <input type="text" value="" class="form-control input-lg">
+                                                        <input type="text" name="email" value="" class="form-control input-lg">
+                                                        @if ($errors->has('email'))
+                                                            <span class="help-block">
+                                                                <strong>{{ $errors->first('email') }}</strong>
+                                                            </span>
+                                                        @endif
+                                                        @if ($errors->has('message'))
+                                                            <span class="help-block">
+                                                                <strong>{{ $errors->first('message') }}</strong>
+                                                            </span>
+                                                        @endif
                                                     </div>
                                                 </div>
                                             </div>
@@ -47,7 +57,12 @@
                                                     <div class="col-md-12">
                                                         <a class="pull-right" href="#">(Olvidó la contraseña?)</a>
                                                         <label>Contraseña</label>
-                                                        <input type="password" value="" class="form-control input-lg">
+                                                        <input type="password" name="password" value="" class="form-control input-lg">
+                                                        @if ($errors->has('password'))
+                                                            <span class="help-block">
+                                                                <strong>{{ $errors->first('password') }}</strong>
+                                                            </span>
+                                                        @endif
                                                     </div>
                                                 </div>
                                             </div>
