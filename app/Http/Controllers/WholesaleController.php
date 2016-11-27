@@ -9,7 +9,8 @@ use App\Http\Controllers\Controller;
 
 use App\Product;
 
-class ProductController extends Controller
+
+class WholesaleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +19,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('product');
+        return view('wholesale');
     }
 
     /**
@@ -50,7 +51,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        return view('productdetail');
+        //
     }
 
     /**

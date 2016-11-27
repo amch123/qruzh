@@ -21,9 +21,7 @@ Route::get('/register', 'UserController@create');
 
 Route::get('/home', 'HomeController@index');
 
-Route::get('/message', 'MessageController@create');
-
-Route::post('/message/store', 'MessageController@store');
+Route::get('/message', 'MessageController@index');
 
 Route::get('/shop', 'ShopController@index');
 
@@ -34,3 +32,7 @@ Route::get('/user/edit/{id}', 'UserController@edit');
 Route::get('/blog', 'BlogController@index');
 
 Route::get('/product', 'ProductController@index');
+
+Route::get('/product/show/{id}', 'ProductController@show');
+
+Route::get('/wholesale', 'WholesaleController@index');

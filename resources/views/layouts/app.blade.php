@@ -116,7 +116,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <a href="{{ url('/wholesale') }}">
                                                             Mayoreo
                                                         </a>
                                                     </li>
@@ -126,7 +126,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <a href="{{ url('/message') }}">
                                                             Contáctanos
                                                         </a>
                                                     </li>

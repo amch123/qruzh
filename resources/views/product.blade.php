@@ -52,7 +52,7 @@
                                     <a href="shop-cart.html" class="add-to-cart-product">
                                         <span><i class="fa fa-shopping-cart"></i> Agregar al Carro</span>
                                     </a>
-                                    <a href="shop-product-sidebar.html">
+                                    <a href="{{ url('/productdetail') }}">
                                         <span class="product-thumb-info-image">
                                             <span class="product-thumb-info-act">
                                                 <span class="product-thumb-info-act-left"><em>Ver</em></span>

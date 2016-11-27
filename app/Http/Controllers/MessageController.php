@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateMessage;
 use App\Message;
-use Session;
 
 class MessageController extends Controller
 {
@@ -16,7 +15,7 @@ class MessageController extends Controller
      */
     public function index()
     {
-        //
+        return view('message');
     }
 
     /**
@@ -26,7 +25,7 @@ class MessageController extends Controller
      */
     public function create()
     {
-        return view('contact');
+   
     }
 
     /**
@@ -37,13 +36,7 @@ class MessageController extends Controller
      */
     public function store(CreateMessage $request)
     {
-        $message = new Message($request->all());
-
-        if ($message->save()) {
-            Session::set('status_message_store', '1');
-        }
-
-        return redirect('/message');
+       //
     }
 
     /**
