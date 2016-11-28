@@ -25,7 +25,7 @@ class MessageController extends Controller
      */
     public function create()
     {
-   
+        return view('message');
     }
 
     /**
@@ -36,7 +36,15 @@ class MessageController extends Controller
      */
     public function store(CreateMessage $request)
     {
-       //
+       $message = new Message($request->all());
+
+        if ($message->save()) {
+            return redirect('/message')->with('status', 1);
+        }
+        else  
+        {
+            return redirect('/message')->with('status', 2);
+        }
     }
 
     /**

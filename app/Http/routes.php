@@ -23,6 +23,10 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/message', 'MessageController@index');
 
+Route::get('/message/create', 'MessageController@create');
+
+Route::post('/message/store', 'MessageController@store');
+
 Route::get('/shop', 'ShopController@index');
 
 Route::get('/auth/logout', 'Auth\LoginController@logout');

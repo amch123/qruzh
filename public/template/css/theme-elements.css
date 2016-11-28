@@ -4210,7 +4210,7 @@ html.boxed .pricing-table .plan, html.boxed .pricing-table h3 {
 .feature-box .feature-box-icon {
 	background: #CCC;
 	border-radius: 35px;
-	color: #FFF;
+	color: #000000;
 	display: inline-block;
 	float: left;
 	height: 35px;

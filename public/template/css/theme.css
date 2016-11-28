@@ -1963,8 +1963,6 @@ html.dark .text-muted {
 }
 /* Section Featured */
 section.section {
-	background: #FF7C0C;
-	border-top: 5px solid #f1f1f1;
 	margin: 30px 0;
 	padding: 50px 0;
 }
