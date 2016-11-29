@@ -35,6 +35,37 @@
                                     data-start="1800"
                                     data-transform_in="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;s:500;"><img src="img/slides/mobile-device.png" alt=""></div>
                             </li>
+                             <li data-transition="fade">
+                                {{ Html::image('template/img/slider3.jpg') }}
+
+                                <div class="tp-caption top-label"
+                                    data-x="700"
+                                    data-y="180"
+                                    data-start="500"
+                                    data-transform_in="y:[-300%];opacity:0;s:500;"><em>Consigue todo para tu celular</em></div>
+
+                                <div class="tp-caption main-label"
+                                    style="color: #FF7C0C;"
+                                    data-x="700"
+                                    data-y="210"
+                                    data-start="1500"
+                                    data-whitespace="nowrap"                         
+                                    data-transform_in="y:[100%];s:500;"
+                                    data-transform_out="opacity:0;s:500;"
+                                    data-mask_in="x:0px;y:0px;"><em>y mucho más...</em></div>
+
+                                <div class="tp-caption bottom-label"
+                                    data-x="220"
+                                    data-y="280"
+                                    data-start="2000"
+                                    data-transform_in="y:[100%];opacity:0;s:500;"></div>
+
+                                <div class="tp-caption"
+                                    data-x="right" data-hoffset="0"
+                                    data-y="bottom" data-voffset="0"
+                                    data-start="1800"
+                                    data-transform_in="x:50;y:150;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0.5;scaleY:0.5;skewX:0;skewY:0;opacity:0;transformPerspective:0;transformOrigin:50% 50%;s:500;"><img src="img/slides/mobile-device.png" alt=""></div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -61,13 +92,13 @@
                             <li class="col-md-3 col-sm-6 col-xs-12 product">
                                 <span class="product-thumb-info">
                                     <a href="shop-cart.html" class="add-to-cart-product">
-                                        <span><i class="fa fa-shopping-cart"></i> Add to Cart</span>
+                                        <span><i class="fa fa-shopping-cart"></i> Agregar al Carro</span>
                                     </a>
                                     <a href="shop-product-sidebar.html">
                                         <span class="product-thumb-info-image">
                                             <span class="product-thumb-info-act">
-                                                <span class="product-thumb-info-act-left"><em>View</em></span>
-                                                <span class="product-thumb-info-act-right"><em><i class="fa fa-plus"></i> Details</em></span>
+                                                <span class="product-thumb-info-act-left"><em>Ver</em></span>
+                                                <span class="product-thumb-info-act-right"><em><i class="fa fa-plus"></i> Detalles</em></span>
                                             </span>
                                             {{ Html::image('template/img/products/product-1.jpg', '', array('class' => 'img-responsive')) }}
                                         </span>
@@ -85,13 +116,13 @@
                             <li class="col-md-3 col-sm-6 col-xs-12 product">
                                 <span class="product-thumb-info">
                                     <a href="shop-cart.html" class="add-to-cart-product">
-                                        <span><i class="fa fa-shopping-cart"></i> Add to Cart</span>
+                                        <span><i class="fa fa-shopping-cart"></i> Agregar al Carro</span>
                                     </a>
                                     <a href="shop-product-sidebar.html">
                                         <span class="product-thumb-info-image">
                                             <span class="product-thumb-info-act">
-                                                <span class="product-thumb-info-act-left"><em>View</em></span>
-                                                <span class="product-thumb-info-act-right"><em><i class="fa fa-plus"></i> Details</em></span>
+                                                <span class="product-thumb-info-act-left"><em>Ver</em></span>
+                                                <span class="product-thumb-info-act-right"><em><i class="fa fa-plus"></i> Detalles</em></span>
                                             </span>
                                             {{ Html::image('template/img/products/product-2.jpg', '', array('class' => 'img-responsive')) }}
                                         </span>
@@ -109,13 +140,13 @@
                             <li class="col-md-3 col-sm-6 col-xs-12 product">
                                 <span class="product-thumb-info">
                                     <a href="shop-cart.html" class="add-to-cart-product">
-                                        <span><i class="fa fa-shopping-cart"></i> Add to Cart</span>
+                                        <span><i class="fa fa-shopping-cart"></i> Agregar al Carro</span>
                                     </a>
                                     <a href="shop-product-sidebar.html">
                                         <span class="product-thumb-info-image">
                                             <span class="product-thumb-info-act">
-                                                <span class="product-thumb-info-act-left"><em>View</em></span>
-                                                <span class="product-thumb-info-act-right"><em><i class="fa fa-plus"></i> Details</em></span>
+                                                <span class="product-thumb-info-act-left"><em>Ver</em></span>
+                                                <span class="product-thumb-info-act-right"><em><i class="fa fa-plus"></i> Detalles</em></span>
                                             </span>
                                             {{ Html::image('template/img/products/product-3.jpg', '', array('class' => 'img-responsive')) }}
                                         </span>
@@ -133,13 +164,13 @@
                             <li class="col-md-3 col-sm-6 col-xs-12 product">
                                 <span class="product-thumb-info">
                                     <a href="shop-cart.html" class="add-to-cart-product">
-                                        <span><i class="fa fa-shopping-cart"></i> Add to Cart</span>
+                                        <span><i class="fa fa-shopping-cart"></i> Agregar al carro</span>
                                     </a>
                                     <a href="shop-product-sidebar.html">
                                         <span class="product-thumb-info-image">
                                             <span class="product-thumb-info-act">
-                                                <span class="product-thumb-info-act-left"><em>View</em></span>
-                                                <span class="product-thumb-info-act-right"><em><i class="fa fa-plus"></i> Details</em></span>
+                                                <span class="product-thumb-info-act-left"><em>Ver</em></span>
+                                                <span class="product-thumb-info-act-right"><em><i class="fa fa-plus"></i> Detalles</em></span>
                                             </span>
                                             {{ Html::image('template/img/products/product-4.jpg', '', array('class' => 'img-responsive')) }}
                                         </span>

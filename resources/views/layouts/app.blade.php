@@ -106,7 +106,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <a href="{{ url('/setting') }}">
                                                             Nosotros
                                                         </a>
                                                     </li>
@@ -121,7 +121,7 @@
                                                         </a>
                                                     </li>
                                                     <li>
-                                                        <a href="#">
+                                                        <a href="{{ url('/branch') }}">
                                                             Sucursales
                                                         </a>
                                                     </li>

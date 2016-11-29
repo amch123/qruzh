@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Welcome;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
 
-class WelcomeController extends Controller
+use App\Branch;
+
+class BranchController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +18,7 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        return view('branch');
     }
 
     /**

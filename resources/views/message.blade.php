@@ -44,7 +44,6 @@
                             </div>
                             @endif
 
-                            <h2 class="mb-sm mt-sm">Contáctanos</h2>
                             <form id="contactForm" action="{{ url('/message/store') }}" method="POST">
                                 {{ csrf_field() }}
                                 <div class="row">

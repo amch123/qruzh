@@ -19,47 +19,53 @@
             </section>
         </div>
 
-            <div role="main" class="main shop">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <hr class="tall">
-                        </div>
-                    </div>
+        <div class="container">
 
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div>
-                                <div>
-                                    <div class="thumbnail" data-appear-animation="fadeInDown" data-appear-animation-delay="300">
-                                    {{ Html::image('template/img/products/product-14.png', '', array('class' => 'img-responsive img-rounded')) }}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr class="tall">
+                </div>
+            </div>
 
-                        <div class="col-md-6">
-                            <div>
-                                <h2 class="mb-none" data-appear-animation="fadeInRight" data-appear-animation-delay="300">Estamos en todo el territorio Méxicano</h2>
-                                <div data-appear-animation="fadeInRight" data-appear-animation-delay="300">
-                                    <span><h4></h4></span>
-                                    <h4><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Ciudad de México</h4>
-                                    <h4><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Cohuila</h4>
-                                    <h4><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Jalisco</h4>
-                                    <h4><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Nuevo León</h4>
-                                    <h4><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Puebla</h4>
-                                </div> 
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <div>
+                            <div class="thumbnail" data-appear-animation="fadeInDown" data-appear-animation-delay="300">
+                                {{ Html::image('template/img/products/product-14.png', '', array('class' => 'img-responsive img-rounded')) }}
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <hr class="tall">
+
+                <div class="col-md-6">
+                    <div>
+                        <h2 class="mb-none text-center" data-appear-animation="fadeInRight" data-appear-animation-delay="300">Estamos en todo el territorio Méxicano</h2>
+                            <div data-appear-animation="fadeInRight" data-appear-animation-delay="300">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <hr class="invisible">
+                                    </div>
+                                </div>
+                                
+                                <h4 class="text-center"><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Ciudad de México</h4>
+                                <h4 class="text-center"><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Cohuila</h4>
+                                <h4 class="text-center"><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Jalisco</h4>
+                                <h4 class="text-center"><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Nuevo León</h4>
+                                <h4 class="text-center"><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Puebla</h4>
+                            </div> 
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr class="tall">
+                </div>
+            </div>
         </div>
+    </div>
+    
 @endsection
 
                    

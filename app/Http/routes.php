@@ -40,3 +40,7 @@ Route::get('/product', 'ProductController@index');
 Route::get('/product/show/{id}', 'ProductController@show');
 
 Route::get('/wholesale', 'WholesaleController@index');
+
+Route::get('/branch', 'BranchController@index');
+
+Route::get('/setting', 'SettingController@index');
