@@ -31,8 +31,8 @@
                         <div class="col-md-6">
                             <div>
                                 <div>
-                                    <div class="thumbnail">
-                                    {{ Html::image('template/img/products/product-14.jpg', '', array('class' => 'img-responsive img-rounded')) }}
+                                    <div class="thumbnail" data-appear-animation="fadeInDown" data-appear-animation-delay="300">
+                                    {{ Html::image('template/img/products/product-14.png', '', array('class' => 'img-responsive img-rounded')) }}
                                     </div>
                                 </div>
                             </div>
@@ -40,8 +40,8 @@
 
                         <div class="col-md-6">
                             <div>
-                                <h2 class="mb-none">Estamos en todo el territorio Méxicano</h2>
-                                <div>
+                                <h2 class="mb-none" data-appear-animation="fadeInRight" data-appear-animation-delay="300">Estamos en todo el territorio Méxicano</h2>
+                                <div data-appear-animation="fadeInRight" data-appear-animation-delay="300">
                                     <span><h4></h4></span>
                                     <h4><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Ciudad de México</h4>
                                     <h4><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Cohuila</h4>
@@ -51,6 +51,11 @@
                                 </div> 
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <hr class="tall">
                     </div>
                 </div>
             </div>

@@ -26,7 +26,7 @@
                 </div>
             </div>
 
-            @if (count($products) > 0)    
+               
             <div class="row">
                 <div class="col-md-9">
 
@@ -42,7 +42,6 @@
                     </div>
 
                     <div class="row">
-                        @foreach($products as $product)
                         <ul class="products product-thumb-info-list">
                             <li class="col-sm-3 col-xs-12 product">
                                 <a href="shop-product-sidebar.html" style="display: none;">
@@ -63,9 +62,9 @@
                                     </a>
                                 <span class="product-thumb-info-content">
                                     <a href="shop-product-sidebar.html">
-                                        <h4>{{ $product->title }}</h4>
+                                        <h4>Marca</h4>
                                         <span class="price">
-                                            <ins><span class="amount">{{ $product->title }}</span></ins>
+                                            <ins><span class="amount">Precio</span></ins>
                                         </span>
                                     </a>
                                 </span>
