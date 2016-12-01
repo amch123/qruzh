@@ -147,38 +147,38 @@
                                                                         <td class="product-name">
                                                                             <a href="shop-product-sidebar.html">Photo Camera
                                                                             <br>
-                                                                                <span class="amount"><strong>$299</strong></span></a>
-                                                                                </td>
-                                                                                <td class="product-actions">
-                                                                                    <a title="Remove this item" class="remove" href="#">
-                                                                                    <i class="fa fa-times"></i>
-                                                                                    </a>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <td class="actions" colspan="6">
-                                                                                    <div class="actions-continue">
-                                                                                    <button type="submit" class="btn btn-default">View All</button>
-                                                                                    <button type="submit" class="btn pull-right btn-primary">Proceed to Checkout <i class="fa fa-angle-right ml-xs"></i></button>
-                                                                                    </div>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </li>
-                                                        </ul>
+                                                                            <span class="amount"><strong>$299</strong></span></a>
+                                                                        </td>
+                                                                        <td class="product-actions">
+                                                                            <a title="Remove this item" class="remove" href="#">
+                                                                                <i class="fa fa-times"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="actions" colspan="6">
+                                                                            <div class="actions-continue">
+                                                                                <button type="submit" class="btn btn-default">View All</button>
+                                                                                <button type="submit" class="btn pull-right btn-primary">Proceed to Checkout <i class="fa fa-angle-right ml-xs"></i></button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
                                                     </li>
                                                 </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
+                                            </li>
+                                        </ul>
+                                    </nav>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </header>
+            </div>
+        </div>
+    </header>
 @endsection
 
 @section('content')
@@ -262,72 +262,71 @@
                             <strong>Éxito!</strong> Has sido agregado a nuestra lista de correos electrónicos.
                         </div>
             
-                            <div class="alert alert-danger hidden" id="newsletterError"></div>
-            
-                            <form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST">
-                                <div class="input-group">
-                                    <input class="form-control" placeholder="Correo Electrónico" name="newsletterEmail" id="newsletterEmail" type="text">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="enviar">Ir!</button>
-                                    </span>
-                                </div>
-                            </form>
-                        </div>
+                        <div class="alert alert-danger hidden" id="newsletterError"></div>
+                        <form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST">
+                            <div class="input-group">
+                                <input class="form-control" placeholder="Correo Electrónico" name="newsletterEmail" id="newsletterEmail" type="text">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="enviar">Ir!</button>
+                                </span>
+                            </div>
+                        </form>
                     </div>
-                    <div class="col-md-3">
-                        <div class="contact-details">
-                            <h4>Menú</h4>
-                            <ul class="contact">
-                                <a href="#"><li><p><strong>Inicio</strong></p></li></a>
-                                <a href="#"><li><p><strong>Nosotros</strong></p></li></a>
-                                <a href="#"><li><p><strong>Productos</strong></p></li></a>
-                                <a href="#"><li><p><strong>Mayoreo</strong></p></li></a>
-                                <a href="#"><li><p><strong>Sucursales</strong></p></li></a>
-                                <a href="#"><li><p><strong>Contáctanos</strong></p></li></a>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <h4>Siguenos</h4>
-                        <ul class="social-icons">
-                            <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-md-2">
-                        <h4>Aceptamos</h4>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-details">
+                        <h4>Menú</h4>
                         <ul class="contact">
-                            <li><a href="#" target="_blank">{{ Html::image('template/img/visa.png') }}</i></a></li>
-                            <li><a href="#" target="_blank">{{ Html::image('template/img/mastercard.png') }}</i></a></li>
-                            <li><a href="#" target="_blank">{{ Html::image('template/img/paypal.png') }}</i></a></li>
+                            <a href="#"><li><p><strong>Inicio</strong></p></li></a>
+                            <a href="#"><li><p><strong>Nosotros</strong></p></li></a>
+                            <a href="#"><li><p><strong>Productos</strong></p></li></a>
+                            <a href="#"><li><p><strong>Mayoreo</strong></p></li></a>
+                            <a href="#"><li><p><strong>Sucursales</strong></p></li></a>
+                            <a href="#"><li><p><strong>Contáctanos</strong></p></li></a>
                         </ul>
                     </div>
                 </div>
+                <div class="col-md-3">
+                    <h4>Siguenos</h4>
+                    <ul class="social-icons">
+                        <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h4>Aceptamos</h4>
+                    <ul class="contact">
+                        <li><a href="#" target="_blank">{{ Html::image('template/img/visa.png') }}</i></a></li>
+                        <li><a href="#" target="_blank">{{ Html::image('template/img/mastercard.png') }}</i></a></li>
+                        <li><a href="#" target="_blank">{{ Html::image('template/img/paypal.png') }}</i></a></li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-7">
-                            <p>© {{ date('Y') }} MOBILEPHONE. Todos los derechos reservados.</p>
-                        </div>
-                        <div class="col-md-4">
-                            <nav id="sub-menu">
-                                <ul>
-                                    <li>Powered by</li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="col-md-1">
-                            <nav id="sub-menu">
-                                <a href="#" class="logo">
-                                    {{ Html::image('template/img/logo-footer.png') }}
-                                </a>
-                            </nav>
-                        </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <p>© {{ date('Y') }} MOBILEPHONE. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <nav id="sub-menu">
+                            <ul>
+                                <li>Powered by</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-1">
+                        <nav id="sub-menu">
+                            <a href="#" class="logo">
+                                {{ Html::image('template/img/logo-footer.png') }}
+                            </a>
+                        </nav>
                     </div>
                 </div>
             </div>
-        </footer>               
+        </div>
+    </footer>               
 @endsection
 
 @section('js')
