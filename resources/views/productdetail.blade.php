@@ -100,32 +100,32 @@
                                 <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
                                     <nav>
                                         <ul class="nav nav-pills" id="mainNav">
-                                            <li class="active">
+                                            <li @if(Session::get('button') == 1) class="active" @endif>
                                                 <a href="{{ url('/') }}">
                                                     Inicio
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li @if(Session::get('button') == 2) class="active" @endif>
                                                 <a href="{{ url('/setting') }}">
                                                     Nosotros
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li @if(Session::get('button') == 3) class="active" @endif>
                                                 <a href="{{ url('/product') }}">
                                                     Productos
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li @if(Session::get('button') == 4) class="active" @endif>
                                                 <a href="{{ url('/wholesale') }}">
                                                     Mayoreo
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li @if(Session::get('button') == 5) class="active" @endif>
                                                 <a href="{{ url('/branch') }}">
                                                     Sucursales
                                                 </a>
                                             </li>
-                                            <li>
+                                            <li @if(Session::get('button') == 6) class="active" @endif>
                                                 <a href="{{ url('/message') }}">
                                                     Contáctanos
                                                 </a>

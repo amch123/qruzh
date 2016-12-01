@@ -15,6 +15,8 @@ class MessageController extends Controller
      */
     public function index()
     {
+        session(['button' => '6']);
+
         return view('message');
     }
 

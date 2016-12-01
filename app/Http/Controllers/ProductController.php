@@ -18,6 +18,8 @@ class ProductController extends Controller
      */
     public function index()
     {
+        session(['button' => '3']);
+
         return view('product');
     }
 

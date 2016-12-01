@@ -21,6 +21,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+        session(['button' => '1']);
+        
         return view('home');
     }
 }

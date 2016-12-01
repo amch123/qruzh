@@ -15,6 +15,8 @@ class WelcomeController extends Controller
      */
     public function index()
     {
+        session(['button' => '1']);
+
         return view('welcome');
     }
 

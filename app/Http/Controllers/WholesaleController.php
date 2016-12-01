@@ -19,6 +19,8 @@ class WholesaleController extends Controller
      */
     public function index()
     {
+        session(['button' => '4']);
+
         return view('wholesale');
     }
 

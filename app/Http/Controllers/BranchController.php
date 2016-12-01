@@ -18,6 +18,8 @@ class BranchController extends Controller
      */
     public function index()
     {
+        session(['button' => '5']);
+
         return view('branch');
     }
 
