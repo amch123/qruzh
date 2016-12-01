@@ -25,15 +25,15 @@
                 <div class="col-md-12">
                     <div class="featured-boxes">
                         @if(session('status') == 1)
-                            <div class="text-center style-msg successmsg">
-                                <div class="sb-msg"><i class="icon-thumbs-up"></i><strong>Well done!</strong> We have sent the password to your email.</div>
+                            <div class="alert alert-success">
+                                <strong>Exito!</strong> Verifique su email para activar su cuenta.
                             </div>
                         @elseif(session('status') == 2)
-                            <div class="style-msg errormsg">
-                                <div class="sb-msg"><i class="icon-remove"></i><strong>Oh snap!</strong> Please try to register again</div>
+                            <div class="alert alert-danger">
+                                <strong>Error!</strong> Intente registrarse nuevamente.
                             </div>
                         @endif
-                        
+
                         <div class="row">
                             <div class="col-sm-4">
                             </div>
