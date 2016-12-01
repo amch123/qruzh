@@ -11,13 +11,11 @@
 |
 */
 
+Route::auth();
+
+Route::get('/auth/logout', 'Auth\AuthController@logout');
+
 Route::get('/', 'WelcomeController@index');
-
-Route::get('/login', 'Auth\AuthController@index');
-
-Route::post('user/login', 'Auth\AuthController@login');
-
-Route::get('/register', 'UserController@create');
 
 Route::get('/home', 'HomeController@index');
 
@@ -28,8 +26,6 @@ Route::get('/message/create', 'MessageController@create');
 Route::post('/message/store', 'MessageController@store');
 
 Route::get('/shop', 'ShopController@index');
-
-Route::get('/auth/logout', 'Auth\LoginController@logout');
 
 Route::get('/user/edit/{id}', 'UserController@edit');
 

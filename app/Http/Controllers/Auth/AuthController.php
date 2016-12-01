@@ -2,9 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
 use App\User;
+use App\Email;
+use Validator;
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Login;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
@@ -19,47 +23,73 @@ class AuthController extends Controller
     |
     */
 
+    use AuthenticatesAndRegistersUsers, ThrottlesLogins;
+
     /**
-     * Display a listing of the resource.
+     * Where to redirect users after login / registration.
      *
-     * @return \Illuminate\Http\Response
+     * @var string
      */
-    public function index()
+    protected $redirectTo = '/';
+
+    /**
+     * Create a new authentication controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-        return view('auth.login');
+        $this->middleware($this->guestMiddleware(), ['except' => 'logout']);
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Get a validator for an incoming registration request.
      *
-     * @return \Illuminate\Http\Response
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
      */
-    public function create()
+    protected function validator(array $data)
     {
-
+        return Validator::make($data, [
+            'name' => 'required|max:255',
+            'email' => 'required|email|max:255|unique:users',
+        ]);
     }
 
     /**
-     * Login an user.
+     * Create a new user instance after a valid registration.
+     *
+     * @param  array  $data
+     * @return User
+     */
+    protected function create(array $data)
+    {
+        return User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'password' => bcrypt($data['password']),
+            'id_role' => 2,
+        ]);
+    }
+
+    /**
+     * Handle a registration request for the application.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function login(Login $request)
+    public function register(Request $request)
     {
-        if (Auth::attempt(['email' => $email, 'password' => $password])) {
-            return redirect('/');
+        $validator = $this->validator($request->all());
+
+        if ($validator->fails()) {
+            $this->throwValidationException(
+                $request, $validator
+            );
         }
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+        if ($this->create($request->all())) {
+            return redirect('/register')->with('status', 1);
+        }
     }
 }
