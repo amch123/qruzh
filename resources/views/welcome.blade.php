@@ -39,20 +39,21 @@
                                 {{ Html::image('template/img/slider3.jpg') }}
 
                                 <div class="tp-caption top-label"
-                                    data-x="60"
+                                    style="color: #FF7C0C; font-weight: bolder;"
+                                    data-x="40"
                                     data-y="180"
                                     data-start="500"
-                                    data-transform_in="y:[-300%];opacity:0;s:500;"><em>Consigue todo para tu celular</em></div>
+                                    data-transform_in="y:[-300%];opacity:0;s:500;">¡Estamos al alcance</div>
 
                                 <div class="tp-caption main-label"
-                                    style="color: #FF7C0C;"
-                                    data-x="60"
+                                    style="color: #000000;"
+                                    data-x="40"
                                     data-y="210"
                                     data-start="1500"
                                     data-whitespace="nowrap"                         
                                     data-transform_in="y:[100%];s:500;"
                                     data-transform_out="opacity:0;s:500;"
-                                    data-mask_in="x:0px;y:0px;"><em>y mucho más...</em></div>
+                                    data-mask_in="x:0px;y:0px;">de tu mano!</div>
 
                                 <div class="tp-caption bottom-label"
                                     data-x="220"
