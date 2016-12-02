@@ -76,16 +76,18 @@
                                             </div>
                                         </form>
                                     </div>
-                                    <nav class="header-nav-top">
-                                        <ul class="nav nav-pills">
-                                            <li class="hidden-xs">
-                                                <a href="{{ url('/login') }}"><i class="fa fa-angle-right"></i> Ingresa</a>
-                                            </li>
-                                            <li class="hidden-xs">
-                                                <a href="{{ url('/register') }}"><i class="fa fa-angle-right"></i> Registrate</a>
-                                            </li>
-                                        </ul>
-                                    </nav>
+                                    @if(!Auth::check())
+                                        <nav class="header-nav-top">
+                                            <ul class="nav nav-pills">
+                                                <li class="hidden-xs">
+                                                    <a href="{{ url('/login') }}"><i class="fa fa-angle-right"></i> Ingresa</a>
+                                                </li>
+                                                <li class="hidden-xs">
+                                                    <a href="{{ url('/register') }}"><i class="fa fa-angle-right"></i> Registrate</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    @endif
                                 </div>
                                 <div class="header-row">
                                     <div class="header-nav">
@@ -131,7 +133,7 @@
                                                     </li>
                                                     <li class="dropdown dropdown-mega dropdown-mega-shop" id="headerShop">
                                                         <a class="dropdown-toggle" href="page-login.html">
-                                                            <i class="fa fa-shopping-cart"></i> Carro (1) - $299
+                                                            <i class="fa fa-shopping-cart"></i> Carro ({{ \Cart::count() }}) - $299
                                                         </a>
                                                         <ul class="dropdown-menu">
                                                             <li>

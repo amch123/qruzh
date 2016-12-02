@@ -43,35 +43,34 @@
 
                     <div class="row">
                         <ul class="products product-thumb-info-list">
-                            <li class="col-sm-3 col-xs-12 product">
-                                <a href="shop-product-sidebar.html" style="display: none;">
-                                    <span class="onsale">Sale!</span>
-                                </a>
-                                <span class="product-thumb-info">
-                                    <a href="shop-cart.html" class="add-to-cart-product">
-                                        <span><i class="fa fa-shopping-cart"></i> Agregar al Carro</span>
+                            @foreach($products as $product)
+                                <li class="col-sm-4 col-xs-12 product">
+                                    <a href="shop-product-sidebar.html" style="display: none;">
+                                        <span class="onsale">Sale!</span>
                                     </a>
-                                    <a href="{{ url('/product/show/1') }}">
-                                        <span class="product-thumb-info-image">
-                                            <span class="product-thumb-info-act">
-                                                <span class="product-thumb-info-act-left"><em>Ver</em></span>
-                                                <span class="product-thumb-info-act-right"><em><i class="fa fa-plus"></i> Detalles</em></span>
+                                    <span class="product-thumb-info">
+                                        <a href="{{ url('/product/show/1') }}">
+                                            <span class="product-thumb-info-image">
+                                                <span class="product-thumb-info-act">
+                                                    <span class="product-thumb-info-act-left"><em>Ver</em></span>
+                                                    <span class="product-thumb-info-act-right"><em><i class="fa fa-plus"></i> Detalles</em></span>
+                                                </span>
+                                                    {{ Html::image('template/img/products/product-2.jpg', '', array('class' => 'img-responsive')) }}
                                             </span>
-                                                {{ Html::image('template/img/products/product-2.jpg', '', array('class' => 'img-responsive')) }}
+                                        </a>
+                                        <span class="product-thumb-info-content">
+                                            <a href="shop-product-sidebar.html">
+                                                <h4>{{ $product->title }}</h4>
+                                                <span class="price">
+                                                    <ins><span class="amount">{{ $product->unit_price }}</span></ins>
+                                                </span>
+                                            </a>
                                         </span>
-                                    </a>
-                                <span class="product-thumb-info-content">
-                                    <a href="shop-product-sidebar.html">
-                                        <h4>Marca</h4>
-                                        <span class="price">
-                                            <ins><span class="amount">Precio</span></ins>
-                                        </span>
-                                    </a>
-                                </span>
-                            </span>
-                        </li>
-                    </ul>
-                </div>
+                                    </span>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
 
                 <div class="row">
                     <div class="col-md-12">

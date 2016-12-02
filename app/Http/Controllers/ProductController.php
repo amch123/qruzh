@@ -18,9 +18,11 @@ class ProductController extends Controller
      */
     public function index()
     {
+        $products = Product::All();
+
         session(['button' => '3']);
 
-        return view('product');
+        return view('product', ['products'=>$products]);
     }
 
     /**
