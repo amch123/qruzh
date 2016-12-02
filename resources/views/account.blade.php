@@ -1,564 +1,376 @@
 @extends('layouts.app')
 
 @section('meta')
+    <!-- Basic -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Dashboard</title>
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <!-- Bootstrap 3.3.6 -->
-    {{ Html::style('controlpanel/bootstrap/css/bootstrap.min.css') }}
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!-- Ionicons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <!-- Theme style -->
-    {{ Html::style('controlpanel/dist/css/AdminLTE.min.css') }}
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-       folder instead of downloading all of them to reduce the load. -->
-    {{ Html::style('controlpanel/dist/css/skins/_all-skins.min.css') }}
-    <!-- iCheck -->
-    {{ Html::style('controlpanel/plugins/iCheck/flat/blue.css') }}
-    <!-- Morris chart -->
-    {{ Html::style('controlpanel/plugins/morris/morris.css') }}
-    <!-- jvectormap -->
-    {{ Html::style('controlpanel/plugins/jvectormap/jquery-jvectormap-1.2.2.css') }}
-    <!-- Date Picker -->
-    {{ Html::style('controlpanel/plugins/datepicker/datepicker3.css') }}
-    <!-- Daterange picker -->
-    {{ Html::style('controlpanel/plugins/daterangepicker/daterangepicker.css') }}
-    <!-- bootstrap wysihtml5 - text editor -->
-    {{ Html::style('controlpanel/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <title>Qruzh</title>  
+
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Porto - Responsive HTML5 Template">
+    <meta name="author" content="okler.net">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Web Fonts  -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+    <!-- Vendor CSS -->
+    {{ Html::style('template/vendor/bootstrap/css/bootstrap.css') }}
+    {{ Html::style('template/vendor/font-awesome/css/font-awesome.css') }}
+    {{ Html::style('template/vendor/simple-line-icons/css/simple-line-icons.css') }}
+    {{ Html::style('template/vendor/owl.carousel/assets/owl.carousel.min.css') }}
+    {{ Html::style('template/vendor/owl.carousel/assets/owl.theme.default.min.css') }}
+    {{ Html::style('template/vendor/magnific-popup/magnific-popup.css') }}
+
+    <!-- Theme CSS -->
+    {{ Html::style('template/css/theme.css') }}
+    {{ Html::style('template/css/theme-elements.css') }}
+    {{ Html::style('template/css/theme-blog.css') }}
+    {{ Html::style('template/css/theme-shop.css') }}
+    {{ Html::style('template/css/theme-animate.css') }}
+
+    <!-- Current Page CSS -->
+    {{ Html::style('template/vendor/rs-plugin/css/settings.css') }}
+    {{ Html::style('template/vendor/rs-plugin/css/layers.css') }}
+    {{ Html::style('template/vendor/rs-plugin/css/navigation.css') }}
+    {{ Html::style('template/vendor/circle-flip-slideshow/css/component.css') }}
+
+    <!-- Skin CSS -->
+    {{ Html::style('template/css/skins/default.css') }}
+
+    <!-- Theme Custom CSS -->
+    {{ Html::style('template/css/custom.css') }}
+
+    <!-- Head Libs -->
+    {{ Html::script('template/vendor/modernizr/modernizr.js') }}
 @endsection
 
 @section('header')
-    <body class="hold-transition skin-blue sidebar-mini">
-        <div class="wrapper">
-
-            <header class="main-header">
-                <!-- Logo -->
-                <a href="index2.html" class="logo">
-                    <!-- mini logo for sidebar mini 50x50 pixels -->
-                    <span class="logo-mini">
-                        <b>A</b>LT
-                    </span>
-                    <!-- logo for regular state and mobile devices -->
-                    <span class="logo-lg">
-                        <b>Admin</b>LTE
-                    </span>
-                </a>
-                <!-- Header Navbar: style can be found in header.less -->
-                <nav class="navbar navbar-static-top">
-                    <!-- Sidebar toggle button-->
-                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                        <span class="sr-only">Toggle navigation</span>
-                    </a>
-
-                    <div class="navbar-custom-menu">
-                        <ul class="nav navbar-nav">
-                            <!-- Messages: style can be found in dropdown.less-->
-                            <li class="dropdown messages-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-envelope-o"></i>
-                                    <span class="label label-success">4</span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="header">You have 4 messages</li>
-                                    <li>
-                                        <!-- inner menu: contains the actual data -->
-                                        <ul class="menu">
-                                            <li><!-- start message -->
-                                                <a href="#">
-                                                    <div class="pull-left">
-                                                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-                                                    </div>
-                                                    <h4>
-                                                        Support Team
-                                                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                                    </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <!-- end message -->
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        AdminLTE Design Team
-                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Developers
-                        <small><i class="fa fa-clock-o"></i> Today</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Sales Department
-                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <div class="pull-left">
-                        <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
-                      </div>
-                      <h4>
-                        Reviewers
-                        <small><i class="fa fa-clock-o"></i> 2 days</small>
-                      </h4>
-                      <p>Why not buy a new awesome theme?</p>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer"><a href="#">See All Messages</a></li>
-            </ul>
-          </li>
-          <!-- Notifications: style can be found in dropdown.less -->
-          <li class="dropdown notifications-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-bell-o"></i>
-              <span class="label label-warning">10</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
-              <li>
-                <!-- inner menu: contains the actual data -->
-                <ul class="menu">
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                      page and may cause design problems
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-users text-red"></i> 5 new members joined
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class="fa fa-user text-red"></i> You changed your username
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer"><a href="#">View all</a></li>
-            </ul>
-          </li>
-          <!-- Tasks: style can be found in dropdown.less -->
-          <li class="dropdown tasks-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
-              <li>
-                <!-- inner menu: contains the actual data -->
-                <ul class="menu">
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <h3>
-                        Design some buttons
-                        <small class="pull-right">20%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">20% Complete</span>
+    <header id="header" data-plugin-options='{"stickyEnabled": true, "stickyEnableOnBoxed": true, "stickyEnableOnMobile": true, "stickyStartAt": 57, "stickySetTop": "-57px", "stickyChangeLogo": true}'>
+        <div class="header-body">
+            <div class="header-container container">
+                <div class="header-row">
+                    <div class="header-column">
+                        <div class="header-logo">
+                            <a href="{{ url('/') }}">
+                                {{ Html::image('template/img/logo.png', '', array('width' => '141', 'height' => '74', 'data-sticky-width' => '82', 'data-sticky-height' => '40', 'data-sticky-top' => '33')) }}
+                            </a>
                         </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <h3>
-                        Create a nice theme
-                        <small class="pull-right">40%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">40% Complete</span>
+                    </div>
+                    <div class="header-column">
+                        <div class="header-row">
+                            <div class="header-search hidden-xs">
+                                <form id="searchForm" action="page-search-results.html" method="get">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="q" id="q" placeholder="Buscar..." required>
+                                        <span class="input-group-btn">
+                                            <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                            <nav class="header-nav-top">
+                                <ul class="nav nav-pills">
+                                    <li class="hidden-xs">
+                                        <a href="{{ url('/login') }}"><i class="fa fa-angle-right"></i> Ingresa</a>
+                                    </li>
+                                    <li class="hidden-xs">
+                                        <a href="{{ url('/register') }}"><i class="fa fa-angle-right"></i> Registrate</a>
+                                    </li>
+                                </ul>
+                            </nav>
                         </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <h3>
-                        Some task I need to do
-                        <small class="pull-right">60%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">60% Complete</span>
+                        <div class="header-row">
+                            <div class="header-nav">
+                                <button class="btn header-btn-collapse-nav" data-toggle="collapse" data-target=".header-nav-main">
+                                    <i class="fa fa-bars"></i>
+                                </button>
+                                <ul class="header-social-icons social-icons hidden-xs">
+                                    <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                                    <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                                </ul>
+                                <div class="header-nav-main header-nav-main-effect-1 header-nav-main-sub-effect-1 collapse">
+                                    <nav>
+                                        <ul class="nav nav-pills" id="mainNav">
+                                            <li @if(Session::get('button') == 1) class="active" @endif>
+                                                <a href="{{ url('/') }}">
+                                                    Inicio
+                                                </a>
+                                            </li>
+                                            <li @if(Session::get('button') == 2) class="active" @endif>
+                                                <a href="{{ url('/setting') }}">
+                                                    Nosotros
+                                                </a>
+                                            </li>
+                                            <li @if(Session::get('button') == 3) class="active" @endif>
+                                                <a href="{{ url('/product') }}">
+                                                    Productos
+                                                </a>
+                                            </li>
+                                            <li @if(Session::get('button') == 4) class="active" @endif>
+                                                <a href="{{ url('/wholesale') }}">
+                                                    Mayoreo
+                                                </a>
+                                            </li>
+                                            <li @if(Session::get('button') == 5) class="active" @endif>
+                                                <a href="{{ url('/branch') }}">
+                                                    Sucursales
+                                                </a>
+                                            </li>
+                                            <li @if(Session::get('button') == 6) class="active" @endif>
+                                                <a href="{{ url('/message') }}">
+                                                    Contáctanos
+                                                </a>
+                                            </li>
+                                            <li class="dropdown dropdown-mega dropdown-mega-shop" id="headerShop">
+                                                <a class="dropdown-toggle" href="page-login.html">
+                                                    <i class="fa fa-shopping-cart"></i> Carro (1) - $299
+                                                </a>
+                                                <ul class="dropdown-menu">
+                                                    <li>
+                                                        <div class="dropdown-mega-content">
+                                                            <table class="cart">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="product-thumbnail">
+                                                                            <a href="shop-product-sidebar.html">
+                                                                                <img width="100" height="100" alt="" class="img-responsive" src="img/products/product-1.jpg">
+                                                                            </a>
+                                                                        </td>
+                                                                        <td class="product-name">
+                                                                            <a href="shop-product-sidebar.html">Photo Camera
+                                                                            <br>
+                                                                            <span class="amount"><strong>$299</strong></span></a>
+                                                                        </td>
+                                                                        <td class="product-actions">
+                                                                            <a title="Remove this item" class="remove" href="#">
+                                                                                <i class="fa fa-times"></i>
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td class="actions" colspan="6">
+                                                                            <div class="actions-continue">
+                                                                                <button type="submit" class="btn btn-default">View All</button>
+                                                                                <button type="submit" class="btn pull-right btn-primary">Proceed to Checkout <i class="fa fa-angle-right ml-xs"></i></button>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
                         </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                  <li><!-- Task item -->
-                    <a href="#">
-                      <h3>
-                        Make beautiful transitions
-                        <small class="pull-right">80%</small>
-                      </h3>
-                      <div class="progress xs">
-                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                          <span class="sr-only">80% Complete</span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <!-- end task item -->
-                </ul>
-              </li>
-              <li class="footer">
-                <a href="#">View all tasks</a>
-              </li>
-            </ul>
-          </li>
-          <!-- User Account: style can be found in dropdown.less -->
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">Alexander Pierce</span>
-            </a>
-            <ul class="dropdown-menu">
-              <!-- User image -->
-              <li class="user-header">
-                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-
-                <p>
-                  Alexander Pierce - Web Developer
-                  <small>Member since Nov. 2012</small>
-                </p>
-              </li>
-              <!-- Menu Body -->
-              <li class="user-body">
-                <div class="row">
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Followers</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Sales</a>
-                  </div>
-                  <div class="col-xs-4 text-center">
-                    <a href="#">Friends</a>
-                  </div>
+                    </div>
                 </div>
-                <!-- /.row -->
-              </li>
-              <!-- Menu Footer-->
-              <li class="user-footer">
-                <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Profile</a>
-                </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <!-- Control Sidebar Toggle Button -->
-          <li>
-            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+            </div>
+        </div>
+    </header>
 @endsection
 
 @section('content')
-    <!-- Main content -->
-    <section class="content">
+    <div role="main" class="main shop">
 
-    </section>
-    <!-- /.content -->   
+        <div role="main" class="main">
+            <section class="page-header page-header-light page-header-more-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1>Sucursales<span></span></h1>
+                            <ul class="breadcrumb breadcrumb-valign-mid">
+                                <li><a href="{{ url('/') }}">Inicio</a></li>
+                                <li class="active">Sucursales</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <hr class="tall">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <div>
+                            <div class="thumbnail" data-appear-animation="fadeInDown" data-appear-animation-delay="300">
+                                {{ Html::image('template/img/products/product-14.png', '', array('class' => 'img-responsive img-rounded')) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div>
+                        <h2 class="mb-none text-center" data-appear-animation="fadeInRight" data-appear-animation-delay="300">Estamos en todo el territorio Méxicano</h2>
+                            <div data-appear-animation="fadeInRight" data-appear-animation-delay="300">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <hr class="invisible">
+                                    </div>
+                                </div>
+                                
+                                <h4 class="text-center"><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Ciudad de México</h4>
+                                <h4 class="text-center"><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Cohuila</h4>
+                                <h4 class="text-center"><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Jalisco</h4>
+                                <h4 class="text-center"><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Nuevo León</h4>
+                                <h4 class="text-center"><i class="fa fa-map-marker text-warning" aria-hidden="true"></i>    Puebla</h4>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <hr class="tall">
+                </div>
+            </div>
+        </div>
+    </div>
+    
 @endsection
 
 @section('footer')   
-      <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> 2.3.7
-    </div>
-    <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-    reserved.
-  </footer>
-
-  <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
-    <!-- Create the tabs -->
-    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
-      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <!-- Home tab content -->
-      <div class="tab-pane" id="control-sidebar-home-tab">
-        <h3 class="control-sidebar-heading">Recent Activity</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
-
-                <p>Will be 23 on April 24th</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-user bg-yellow"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
-
-                <p>New phone +1(800)555-1234</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
-
-                <p>nora@example.com</p>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <i class="menu-icon fa fa-file-code-o bg-green"></i>
-
-              <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
-
-                <p>Execution time 5 seconds</p>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-        <h3 class="control-sidebar-heading">Tasks Progress</h3>
-        <ul class="control-sidebar-menu">
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Custom Template Design
-                <span class="label label-danger pull-right">70%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Update Resume
-                <span class="label label-success pull-right">95%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Laravel Integration
-                <span class="label label-warning pull-right">50%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="javascript:void(0)">
-              <h4 class="control-sidebar-subheading">
-                Back End Framework
-                <span class="label label-primary pull-right">68%</span>
-              </h4>
-
-              <div class="progress progress-xxs">
-                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <!-- /.control-sidebar-menu -->
-
-      </div>
-      <!-- /.tab-pane -->
-      <!-- Stats tab content -->
-      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
-      <!-- /.tab-pane -->
-      <!-- Settings tab content -->
-      <div class="tab-pane" id="control-sidebar-settings-tab">
-        <form method="post">
-          <h3 class="control-sidebar-heading">General Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Report panel usage
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Some information about this general settings option
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Allow mail redirect
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Other sets of options are available
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Expose author name in posts
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-
-            <p>
-              Allow the user to show his name in blog posts
-            </p>
-          </div>
-          <!-- /.form-group -->
-
-          <h3 class="control-sidebar-heading">Chat Settings</h3>
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Show me as online
-              <input type="checkbox" class="pull-right" checked>
-            </label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Turn off notifications
-              <input type="checkbox" class="pull-right">
-            </label>
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label class="control-sidebar-subheading">
-              Delete chat history
-              <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
-            </label>
-          </div>
-          <!-- /.form-group -->
-        </form>
-      </div>
-      <!-- /.tab-pane -->
-    </div>
-  </aside>
-  <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
-       immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
-</div>
-<!-- ./wrapper -->          
+    <footer id="footer" class="color color-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="newsletter">
+                        <h4>Noticias</h4>
+                        <p>Mantente actualizado en todo lo relacionado <br> a nuestros productos.</p>
+            
+                        <div class="alert alert-success hidden" id="newsletterSuccess">
+                            <strong>Éxito!</strong> Has sido agregado a nuestra lista de correos electrónicos.
+                        </div>
+            
+                        <div class="alert alert-danger hidden" id="newsletterError"></div>
+                        <form id="newsletterForm" action="php/newsletter-subscribe.php" method="POST">
+                            <div class="input-group">
+                                <input class="form-control" placeholder="Correo Electrónico" name="newsletterEmail" id="newsletterEmail" type="text">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="enviar">Ir!</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="contact-details">
+                        <h4>Menú</h4>
+                        <ul class="contact">
+                            <a href="#"><li><p><strong>Inicio</strong></p></li></a>
+                            <a href="#"><li><p><strong>Nosotros</strong></p></li></a>
+                            <a href="#"><li><p><strong>Productos</strong></p></li></a>
+                            <a href="#"><li><p><strong>Mayoreo</strong></p></li></a>
+                            <a href="#"><li><p><strong>Sucursales</strong></p></li></a>
+                            <a href="#"><li><p><strong>Contáctanos</strong></p></li></a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h4>Siguenos</h4>
+                    <ul class="social-icons">
+                        <li class="social-icons-facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li class="social-icons-twitter"><a href="http://www.twitter.com/" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h4>Aceptamos</h4>
+                    <ul class="contact">
+                        <li><a href="#" target="_blank">{{ Html::image('template/img/visa.png') }}</i></a></li>
+                        <li><a href="#" target="_blank">{{ Html::image('template/img/mastercard.png') }}</i></a></li>
+                        <li><a href="#" target="_blank">{{ Html::image('template/img/paypal.png') }}</i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7">
+                        <p>© {{ date('Y') }} MOBILEPHONE. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <nav id="sub-menu">
+                            <ul>
+                                <li>Powered by</li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-md-1">
+                        <nav id="sub-menu">
+                            <a href="#" class="logo">
+                                {{ Html::image('template/img/logo-footer.png') }}
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>               
 @endsection
 
 @section('js')
-  <!-- jQuery 2.2.3 -->
-  {{ Html::script('contolpanel/plugins/jQuery/jquery-2.2.3.min.js') }}
-  <!-- jQuery UI 1.11.4 -->
-  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
-  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-  <script>
-    $.widget.bridge('uibutton', $.ui.button);
-  </script>
-  <!-- Bootstrap 3.3.6 -->
-  {{ Html::script('controlpanel/bootstrap/js/bootstrap.min.js') }}
-  <!-- Morris.js charts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-  {{ Html::script('controlpanel/plugins/morris/morris.min.js') }}
-  <!-- Sparkline -->
-  {{ Html::script('controlpanel/plugins/sparkline/jquery.sparkline.min.js') }}
-  <!-- jvectormap -->
-  {{ Html::script('controlpanel/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js') }}
-  {{ Html::script('controlpanel/plugins/jvectormap/jquery-jvectormap-world-mill-en.js') }}
-  <!-- jQuery Knob Chart -->
-  {{ Html::script('controlpanel/plugins/knob/jquery.knob.js') }}
-  <!-- daterangepicker -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
-  {{ Html::script('controlpanel/plugins/daterangepicker/daterangepicker.js') }}
-  <!-- datepicker -->
-  {{ Html::script('controlpanel/plugins/datepicker/bootstrap-datepicker.js') }}
-  <!-- Bootstrap WYSIHTML5 -->
-  {{ Html::script('controlpanel/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}
-  <!-- Slimscroll -->
-  {{ Html::script('controlpanel/plugins/slimScroll/jquery.slimscroll.min.js') }}
-  <!-- FastClick -->
-  {{ Html::script('controlpanel/plugins/fastclick/fastclick.js') }}
-  <!-- AdminLTE App -->
-  {{ Html::script('controlpanel/dist/js/app.min.js') }}
-  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-  {{ Html::script('controlpanel/dist/js/pages/dashboard.js') }}
-  <!-- AdminLTE for demo purposes -->
-  {{ Html::script('controlpanel/dist/js/demo.js') }}
-</body>
+    <!-- Vendor -->
+    {{ Html::script('template/vendor/jquery/jquery.js') }}
+    {{ Html::script('template/vendor/jquery.appear/jquery.appear.js') }}
+    {{ Html::script('template/vendor/jquery.easing/jquery.easing.js') }}
+    {{ Html::script('template/vendor/jquery-cookie/jquery-cookie.js') }}
+    {{ Html::script('template/vendor/bootstrap/js/bootstrap.js') }}
+    {{ Html::script('template/vendor/common/common.js') }}
+    {{ Html::script('template/vendor/jquery.validation/jquery.validation.js') }}
+    {{ Html::script('template/vendor/jquery.stellar/jquery.stellar.js') }}
+    {{ Html::script('template/vendor/jquery.easy-pie-chart/jquery.easy-pie-chart.js') }}
+    {{ Html::script('template/vendor/jquery.gmap/jquery.gmap.js') }}
+    {{ Html::script('template/vendor/jquery.lazyload/jquery.lazyload.js') }}
+    {{ Html::script('template/vendor/isotope/jquery.isotope.js') }}
+    {{ Html::script('template/vendor/owl.carousel/owl.carousel.js') }}
+    {{ Html::script('template/vendor/magnific-popup/jquery.magnific-popup.js') }}
+    {{ Html::script('template/vendor/vide/vide.js') }}
+        
+    <!-- Theme Base, Components and Settings -->
+    {{ Html::script('template/js/theme.js') }}
+        
+    <!-- Current Page Vendor and Views -->
+    {{ Html::script('template/vendor/rs-plugin/js/jquery.themepunch.tools.min.js') }}
+    {{ Html::script('template/vendor/rs-plugin/js/jquery.themepunch.revolution.min.js') }}
+    {{ Html::script('template/vendor/circle-flip-slideshow/js/jquery.flipshow.js') }}
+    {{ Html::script('template/js/views/view.home.js') }}
+        
+    <!-- Theme Custom -->
+    {{ Html::script('template/js/custom.js') }}
+        
+    <!-- Theme Initialization Files -->
+    {{ Html::script('template/js/theme.init.js') }}
+
+    <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information.
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        
+        ga('create', 'UA-12345678-1', 'auto');
+         ga('send', 'pageview');
+    </script>
+        -->
 @endsection
