@@ -6,7 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'CreateBlogsTable' => $baseDir . '/database/migrations/2016_11_10_150257_create_blogs_table.php',
     'CreateBranchsTable' => $baseDir . '/database/migrations/2016_11_10_150257_create_branchs_table.php',
     'CreateCategoriesTable' => $baseDir . '/database/migrations/2016_11_10_150257_create_categories_table.php',
     'CreateMessagesTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_messages_table.php',
@@ -452,6 +451,7 @@ return array(
     'PHP_Token_STRING' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_STRING_CAST' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_STRING_VARNAME' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
+    'PHP_Token_SUPER' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_SWITCH' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_Stream' => $vendorDir . '/phpunit/php-token-stream/src/Token/Stream.php',
     'PHP_Token_Stream_CachingFactory' => $vendorDir . '/phpunit/php-token-stream/src/Token/Stream/CachingFactory.php',
@@ -466,6 +466,7 @@ return array(
     'PHP_Token_UNSET' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_UNSET_CAST' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_USE' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
+    'PHP_Token_USE_FUNCTION' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_VAR' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_VARIABLE' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
     'PHP_Token_WHERE' => $vendorDir . '/phpunit/php-token-stream/src/Token.php',
@@ -522,4 +523,5 @@ return array(
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
+    'UserSeeder' => $baseDir . '/database/seeds/UserSeeder.php',
 );

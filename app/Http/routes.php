@@ -40,3 +40,5 @@ Route::get('/wholesale', 'WholesaleController@index');
 Route::get('/branch', 'BranchController@index');
 
 Route::get('/setting', 'SettingController@index');
+
+Route::post('/cart/store', 'CartController@store');

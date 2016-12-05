@@ -18,9 +18,11 @@ class ProductController extends Controller
      */
     public function index()
     {
+        $products = Product::All();
+
         session(['button' => '3']);
 
-        return view('product');
+        return view('product', ['products'=>$products]);
     }
 
     /**
@@ -52,7 +54,10 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        return view('productdetail');
+        $product = Product::where('id_product', $id)
+                        ->get();
+
+        return view('productdetail', ['product'=>$product]);
     }
 
     /**

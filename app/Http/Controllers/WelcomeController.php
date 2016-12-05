@@ -17,7 +17,7 @@ class WelcomeController extends Controller
     {
         session(['button' => '1']);
 
-        return view('welcome');
+        return view('account');
     }
 
     /**
